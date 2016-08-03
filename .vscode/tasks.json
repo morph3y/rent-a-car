@@ -1,0 +1,26 @@
+{
+    "version": "0.1.0",
+    "command": "cmd",
+    "isShellCommand": true,
+    "args": [
+        "/c"
+    ],
+    "tasks": [
+        {
+            "taskName": "tsc",
+            "isBuildCommand": true,
+            "args": ["-p", "."],
+            "showOutput": "always",
+            "problemMatcher": "$tsc"
+        },
+        {
+            "taskName": "gulp",
+            "suppressTaskName": true,
+            "args": [
+                "gulp --no-color"
+            ],
+            "isBuildCommand": true,
+            "showOutput": "always"
+        }
+    ]
+}
