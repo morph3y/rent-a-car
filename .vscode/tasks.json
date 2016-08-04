@@ -2,25 +2,15 @@
     "version": "0.1.0",
     "command": "cmd",
     "isShellCommand": true,
+    "showOutput": "always",
     "args": [
         "/c"
     ],
     "tasks": [
         {
-            "taskName": "tsc",
-            "isBuildCommand": true,
-            "args": ["-p", "."],
-            "showOutput": "always",
-            "problemMatcher": "$tsc"
-        },
-        {
-            "taskName": "gulp",
+            "taskName": "build",
             "suppressTaskName": true,
-            "args": [
-                "gulp --no-color"
-            ],
-            "isBuildCommand": true,
-            "showOutput": "always"
+            "args": ["echo Building typescript files... & tsc -p . & echo Executing gulp... & gulp --no-color & echo Build complete & exit 1"]
         }
     ]
 }
