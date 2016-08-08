@@ -4,3 +4,7 @@ app/**/*.js
 app/*.js
 app/**/*.js.map
 app/*.js.map
+wwwroot/app/**/*.js
+wwwroot/app/*.js
+wwwroot/app/**/*.js.map
+wwwroot/app/*.js.map

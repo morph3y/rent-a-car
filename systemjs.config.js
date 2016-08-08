@@ -1,15 +1,14 @@
 (function (global) {
     var map = {
         'app': 'app',
-        '@angular': 'node_modules/@angular',
-        'angular2': 'node_modules/angular2',
-        'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
-        'rxjs': 'node_modules/rxjs'
+        '@angular': 'lib/js/@angular',
+        'rxjs': 'lib/js/rxjs'
     };
     var packages = {
-        'app': { main: 'main.js', defaultExtension: 'js' },
+        'app': { main: 'main', defaultExtension: 'js' },
         'rxjs': { defaultExtension: 'js' },
-        'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
+        'zonejs': { main: 'zone', defaultExtension: 'js' },
+        'reflect-metadata': { main: 'Reflect', defaultExtension: 'js' }
     };
     var ngPackageNames = [
       'common',
@@ -21,13 +20,13 @@
       'platform-browser-dynamic',
       'router',
       'router-deprecated',
-      'upgrade',
+      'upgrade'
     ];
     function packIndex(pkgName) {
         packages['@angular/' + pkgName] = { main: 'index.js', defaultExtension: 'js' };
     }
     function packUmd(pkgName) {
-        packages['@angular/' + pkgName] = { main: '/bundles/' + pkgName + '.umd.js', defaultExtension: 'js' };
+        packages['@angular/' + pkgName] = { main: 'bundles/' + pkgName + '.umd.js', defaultExtension: 'js' };
     }
     var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
     ngPackageNames.forEach(setPackageConfig);

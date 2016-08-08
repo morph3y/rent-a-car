@@ -10,7 +10,7 @@
         {
             "taskName": "build",
             "suppressTaskName": true,
-            "args": ["echo Building typescript files... & tsc -p . & echo Executing gulp... & gulp --no-color & echo Build complete & exit 1"]
+            "args": ["echo Building typescript files... & tsc -p . & echo Executing gulp... & rmdir /S /Q \"wwwroot/lib/js\" & gulp --no-color & echo Build complete & exit 1"]
         }
     ]
 }
