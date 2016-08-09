@@ -2,13 +2,15 @@
     var map = {
         'app': 'app',
         '@angular': 'lib/js/@angular',
-        'rxjs': 'lib/js/rxjs'
+        'rxjs': 'lib/js/rxjs',
+        'symbol-observable': 'lib/js/symbol-observable'
     };
     var packages = {
         'app': { main: 'main', defaultExtension: 'js' },
         'rxjs': { defaultExtension: 'js' },
         'zonejs': { main: 'zone', defaultExtension: 'js' },
-        'reflect-metadata': { main: 'Reflect', defaultExtension: 'js' }
+        'reflect-metadata': { main: 'Reflect', defaultExtension: 'js' },
+        'symbol-observable': { main: 'index', defaultExtension: 'js' }
     };
     var ngPackageNames = [
       'common',
