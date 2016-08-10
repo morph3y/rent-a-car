@@ -2,15 +2,13 @@
     var map = {
         'app': 'app',
         '@angular': 'lib/js/@angular',
+        'angular2-in-memory-web-api': 'lib/js/angular2-in-memory-web-api',
         'rxjs': 'lib/js/rxjs',
-        'symbol-observable': 'lib/js/symbol-observable'
     };
     var packages = {
         'app': { main: 'main', defaultExtension: 'js' },
-        'rxjs': { defaultExtension: 'js' },
-        'zonejs': { main: 'zone', defaultExtension: 'js' },
-        'reflect-metadata': { main: 'Reflect', defaultExtension: 'js' },
-        'symbol-observable': { main: 'index', defaultExtension: 'js' }
+        'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
+        'rxjs': { defaultExtension: 'js' }
     };
     var ngPackageNames = [
       'common',
@@ -30,8 +28,7 @@
     function packUmd(pkgName) {
         packages['@angular/' + pkgName] = { main: 'bundles/' + pkgName + '.umd.js', defaultExtension: 'js' };
     }
-    var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
-    ngPackageNames.forEach(setPackageConfig);
+    ngPackageNames.forEach(System.packageWithIndex ? packIndex : packUmd);
     var config = {
         map: map,
         packages: packages
