@@ -1,15 +1,19 @@
 {
   "compilerOptions": {
-      "experimentalDecorators": true,
-      "module": "commonjs",
-      "target": "es5",
-      "noImplicitAny": true,
-      "removeComments": true,
-      "preserveConstEnums": true,
-      "sourceMap": true,
-      "outDir": "wwwroot/app"
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true, // needed for DI
+    "module": "commonjs",
+    "target": "es5",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "rootDir": "./app",
+    "outDir": "wwwroot/app"
   },
   "exclude": [
-      "node_modules"
+    "node_modules",
+    "wwwroot"
   ]
 }

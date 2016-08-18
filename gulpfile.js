@@ -7,6 +7,10 @@ gulp.task('default', function (done) {
     'node_modules/**/*.js'
   ], { base: 'node_modules' }).pipe(gulp.dest('./wwwroot/lib/js'));
   
+  gulp.src([
+    'app/Views/**/*.*'
+  ], { base: 'app/Views' }).pipe(gulp.dest('./wwwroot/app/Views'));
+
   // Mandatory
   gulp.src([
     'systemjs.config.js',
